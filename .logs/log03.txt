@@ -1,0 +1,56 @@
+Feb 27 06:50:36 ip-172-31-34-182 web[13080]: django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '3.105.94.152'. You may need to add '3.105.94.152' to ALLOWED_HOSTS.
+Feb 27 06:50:36 ip-172-31-34-182 web[13080]: Bad Request: /containers/json
+Feb 27 06:50:41 ip-172-31-34-182 web[13080]: Not Found: /static/blog/post.css
+Feb 27 06:50:41 ip-172-31-34-182 web[13080]: Not Found: /static/app.css
+Feb 27 06:50:41 ip-172-31-34-182 web[13080]: Not Found: /static/blog/images/Will.jpg
+Feb 27 06:50:41 ip-172-31-34-182 web[13080]: Not Found: /static/blog/index.css
+Feb 27 06:50:43 ip-172-31-34-182 web[13080]: Not Found: /static/blog/post.css
+Feb 27 06:50:43 ip-172-31-34-182 web[13080]: Not Found: /static/blog/images/Will.jpg
+Feb 27 06:50:43 ip-172-31-34-182 web[13080]: Not Found: /static/blog/index.css
+Feb 27 06:50:43 ip-172-31-34-182 web[13080]: Not Found: /static/app.css
+Feb 27 06:51:00 ip-172-31-34-182 web[13080]: Not Found: /static/app.css
+Feb 27 06:51:00 ip-172-31-34-182 web[13080]: Not Found: /static/blog/post.css
+Feb 27 06:51:01 ip-172-31-34-182 web[13080]: Not Found: /static/blog/index.css
+Feb 27 06:51:01 ip-172-31-34-182 web[13080]: Not Found: /static/blog/images/Will.jpg
+Feb 27 06:51:01 ip-172-31-34-182 web[13080]: Not Found: /favicon.ico
+Feb 27 06:55:47 ip-172-31-34-182 web[13080]: Invalid HTTP_HOST header: '3.105.94.152'. You may need to add '3.105.94.152' to ALLOWED_HOSTS.
+Feb 27 06:55:47 ip-172-31-34-182 web[13080]: Traceback (most recent call last):
+Feb 27 06:55:47 ip-172-31-34-182 web[13080]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+Feb 27 06:55:47 ip-172-31-34-182 web[13080]:    response = get_response(request)
+Feb 27 06:55:47 ip-172-31-34-182 web[13080]:               ^^^^^^^^^^^^^^^^^^^^^
+Feb 27 06:55:47 ip-172-31-34-182 web[13080]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/django/utils/deprecation.py", line 133, in __call__
+Feb 27 06:55:47 ip-172-31-34-182 web[13080]:    response = self.process_request(request)
+Feb 27 06:55:47 ip-172-31-34-182 web[13080]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Feb 27 06:55:47 ip-172-31-34-182 web[13080]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/django/middleware/common.py", line 48, in process_request
+Feb 27 06:55:47 ip-172-31-34-182 web[13080]:    host = request.get_host()
+Feb 27 06:55:47 ip-172-31-34-182 web[13080]:           ^^^^^^^^^^^^^^^^^^
+Feb 27 06:55:47 ip-172-31-34-182 web[13080]:  File "/var/app/venv/staging-LQM1lest/lib64/python3.11/site-packages/django/http/request.py", line 151, in get_host
+Feb 27 06:55:47 ip-172-31-34-182 web[13080]:    raise DisallowedHost(msg)
+Feb 27 06:55:47 ip-172-31-34-182 web[13080]: django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '3.105.94.152'. You may need to add '3.105.94.152' to ALLOWED_HOSTS.
+Feb 27 06:55:47 ip-172-31-34-182 web[13080]: Bad Request: /
+Feb 27 06:57:42 ip-172-31-34-182 web[13054]: [2025-02-27 06:57:42 +0000] [13054] [INFO] Handling signal: term
+Feb 27 06:57:43 ip-172-31-34-182 web[13080]: [2025-02-27 06:57:43 +0000] [13080] [INFO] Worker exiting (pid: 13080)
+Feb 27 06:57:43 ip-172-31-34-182 web[13080]: ************************
+Feb 27 06:57:43 ip-172-31-34-182 web[13080]: Allowed Hosts: ['MySiteTest-env.eba-qnzkeuzc.ap-southeast-2.elasticbeanstalk.com', 'localhost']
+Feb 27 06:57:43 ip-172-31-34-182 web[13080]: Secret Key: u-%my#7p)r&_lg#(!3_8
+Feb 27 06:57:43 ip-172-31-34-182 web[13080]: ************************
+Feb 27 06:57:43 ip-172-31-34-182 web[13054]: [2025-02-27 06:57:43 +0000] [13054] [INFO] Shutting down: Master
+Feb 27 06:57:45 ip-172-31-34-182 web[15416]: [2025-02-27 06:57:45 +0000] [15416] [INFO] Starting gunicorn 23.0.0
+Feb 27 06:57:45 ip-172-31-34-182 web[15416]: [2025-02-27 06:57:45 +0000] [15416] [INFO] Listening at: http://127.0.0.1:8000 (15416)
+Feb 27 06:57:45 ip-172-31-34-182 web[15416]: [2025-02-27 06:57:45 +0000] [15416] [INFO] Using worker: gthread
+Feb 27 06:57:45 ip-172-31-34-182 web[15443]: [2025-02-27 06:57:45 +0000] [15443] [INFO] Booting worker with pid: 15443
+Feb 27 07:48:51 ip-172-31-34-182 web[15416]: [2025-02-27 07:48:51 +0000] [15416] [INFO] Handling signal: term
+Feb 27 07:48:51 ip-172-31-34-182 web[15443]: [2025-02-27 07:48:51 +0000] [15443] [INFO] Worker exiting (pid: 15443)
+Feb 27 07:48:51 ip-172-31-34-182 web[15443]: ************************
+Feb 27 07:48:51 ip-172-31-34-182 web[15443]: Allowed Hosts: ['MySiteTest-env.eba-qnzkeuzc.ap-southeast-2.elasticbeanstalk.com', 'localhost']
+Feb 27 07:48:51 ip-172-31-34-182 web[15443]: Secret Key: u-%my#7p)r&_lg#(!3_8
+Feb 27 07:48:51 ip-172-31-34-182 web[15443]: ************************
+Feb 27 07:48:52 ip-172-31-34-182 web[15416]: [2025-02-27 07:48:52 +0000] [15416] [INFO] Shutting down: Master
+Feb 27 07:48:54 ip-172-31-34-182 web[17690]: [2025-02-27 07:48:54 +0000] [17690] [INFO] Starting gunicorn 23.0.0
+Feb 27 07:48:54 ip-172-31-34-182 web[17690]: [2025-02-27 07:48:54 +0000] [17690] [INFO] Listening at: http://127.0.0.1:8000 (17690)
+Feb 27 07:48:54 ip-172-31-34-182 web[17690]: [2025-02-27 07:48:54 +0000] [17690] [INFO] Using worker: gthread
+Feb 27 07:48:54 ip-172-31-34-182 web[17718]: [2025-02-27 07:48:54 +0000] [17718] [INFO] Booting worker with pid: 17718
+Feb 27 07:50:14 ip-172-31-34-182 web[17718]: Not Found: /static/app.css
+Feb 27 07:50:14 ip-172-31-34-182 web[17718]: Not Found: /static/blog/post.css
+Feb 27 07:50:14 ip-172-31-34-182 web[17718]: Not Found: /static/blog/index.css
+Feb 27 07:50:14 ip-172-31-34-182 web[17718]: Not Found: /static/blog/images/Will.jpg

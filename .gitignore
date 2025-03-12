@@ -1,5 +1,7 @@
-*.zip
-*.sql
-*.txt
-*.bat
+.venv2/
+.vscode/
+.ignore/
 staticfiles/
+my-site*.zip
+*_bu.sql
+aws_setup.txt
