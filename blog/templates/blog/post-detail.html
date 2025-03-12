@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+This post title
+{% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/post-detail.css" %}" />
+{% endblock css_files %}
+
+{% block content %}
+    {% if comment_form.errors %}
+        <div id="alert">
+            <h2>Unable to save your comment.</h2>
+            <p>Please check it, dickhead!</p>
+            <p><a href="#comment-form">Fix it!</a></p>
+        </div>
+    {% endif %}
+    <section id="summary">
+        <h2>{{ post.title }}</h2>
+        <div>
+            {% for tag in post.tag.all %}
+                <span class="tag"><a class="tagref" href="{% url "post-tag-page" tag.id %}">{{ tag }}</a></span>
+            {% endfor %}
+        </div>
+        <div id="read-later">
+            <form action="{% url "read-later" %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" value="{{ post.id }}" name="post_id">
+                {% if is_saved_for_later %}
+                    <button id="is-stored">Remove</button>
+                {% else %}
+                    <button>Read later</button>
+                {% endif %}
+            </form>
+        </div>
+        <article>
+            <img src="{{ post.image.url }}" alt="{{ post.title }}">
+            <address>
+                <a href="mailto:{{ post.author.email }}">By {{ post.author }}</a>
+            </address>
+            <div>
+                Last updated on <time>{{ post.date|date:"D d M Y" }}</time>
+            </div>
+        </article>
+    </section>
+    <main>
+        {{ post.content|linebreaks }}
+    </main>
+    {% if post.comments.all.count %}
+        <section id="comments">
+            <ul>
+                {% for comment in post.comments.all %}
+                    <li>
+                        <h2>{{ comment.user_name }}</h2>
+                        <p>{{ comment.text|linebreaks }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% endif %}
+    <section id="comment-form">
+        <h2>Add your brilliant comment here...</h2>
+        <form action="{% url "post-detail-page" post.slug %}" method="POST">
+            {% csrf_token %}
+            {% for form_field in comment_form %}
+                <div class="form-control{% if form_field.errors %} invalid{% endif %}">
+                    {{ form_field.label }}
+                    {{ form_field }}
+                    {{ form_field.errors }}
+                </div>
+            {% endfor %}
+            <button>Save your genius comment</button>
+        </form>
+    </section>
+    <section>
+        {% for comment in post.comments.all %}
+            <p>{{ comment.user_name }}: {{ comment.text }}</p>
+        {% endfor %}
+    </section>
+{% endblock %}

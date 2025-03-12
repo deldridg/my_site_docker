@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/post-update.css" %}" />
+{% endblock css_files %}
+
+{% block title %}
+Update post
+{% endblock title %}
+
+{% block content %}
+<section id="post-form">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+            <tr>
+                <td><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+</section>
+{% endblock content %}

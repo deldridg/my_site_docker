@@ -1,0 +1,6 @@
+{
+    "emmet.includeLanguages": {
+        "djangl-html": "html"
+    },
+    "python.languageServer": "Pylance"
+}
