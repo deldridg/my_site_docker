@@ -1,6 +1,7 @@
-.venv2/
+.venv/
 .vscode/
 .ignore/
+.ebextensions/
 staticfiles/
 my-site*.zip
 *_bu.sql
