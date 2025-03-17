@@ -20,8 +20,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the entire project
 COPY . .
 
+# Collect static files
+RUN python manage.py collectstatic --noinput
+
 # Expose port 8000
 EXPOSE 8000
 
 # Run the app
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "my_site.wsgi:application"]
+CMD ["gunicorn", "--workers", "3", "--bind", "0.0.0.0:8000", "my_site.wsgi:application"]
