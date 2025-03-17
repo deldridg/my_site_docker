@@ -2,7 +2,6 @@
 .vscode/
 .ignore/
 .ebextensions/
-staticfiles/
 my-site*.zip
 *_bu.sql
 aws_setup.txt
