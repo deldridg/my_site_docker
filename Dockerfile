@@ -8,11 +8,8 @@ WORKDIR /app
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1
 
-# INstall system dependencies
-RUN apt-get update && apt-get install -y \
-    gcc \
-    libpq-dev \
-    && rm -rf /var/lib/apt/lists/*
+# Install system dependencies
+RUN apt-get update && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements file
 COPY requirements.txt .
